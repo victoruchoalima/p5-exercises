@@ -129,8 +129,77 @@ não estamos dizendo 'desenhe algo' estamos dizendo 'a cada frame, faça isso'. 
     }
 
 por partes, requestAnimationFrame é uma função que basicamente diz, antes do proximo frame, chame essa função. nesse caso a função chamada produz um loop eterno, portanto, a cada frame a função será novamente chamada e a função draw também, consequentemente
+
+porque então num codigo como esse:
+
+        function draw() {
+        background(0);
+        
+        noStroke()
+        fill(255)
+        rectMode(CENTER)
+        square(mouseX,mouseY,24)
+    }
+
+não temos um efeito de piscar? é preciso entender que p5 e o navegador ñao estão constantemente mostrando cada minima operação de desenho. eles primeiro renderizam para um buffer e depois mostram na tela o frame completo:
+
+    background(0) não significa pisca uma tela preta, significa DEFINA O PIXEL BUFFER PARA PRETO ANTES DE DESENHAR O RESTO DO FRAME
     
 
 3. 
 
 LAYERS. a ordem em que inserimos formas na função draw é importante
+
+4.
+
+p5 tem funções evento para além de setup e draw. outro exemplo é a função evento mousePressed(). é preciso entender no entanto que não é que estamos chamando exatamente a função mousePressed. o que estamos fazendo ali é declarar uma callback que sera chamada caso ocorra um clique:
+
+    function mousePressed(){
+        console.log('clicked)
+    }
+
+é o equivalente em JS:
+
+    function handleClick(){
+        console.log('clicked)
+    }
+
+    canvas.addEventListener('mousedown', handleclick)
+
+é preciso no entanto entender a distinção entre EVENT SYSTEM E RENDER LOOP. no exemplo a seguir o flickering em vermelho não esta ocorrendo direito:
+
+    function setup() {
+        createCanvas(800, 800);
+    }
+
+    function draw() {
+        background(0);
+        
+        noStroke()
+        fill(255)
+        rectMode(CENTER)
+        square(mouseX,mouseY,24)
+    }
+
+    function mousePressed(){
+        background(255,0,0)
+    }
+
+temos aqui duas coisas independentes
+
+    1. draw(), roda mais ou menos 60 vezes por segundo
+
+        function draw() {
+        background(0); // ← pinta o fundo de preto sempre
+        square(mouseX, mouseY, 24);
+    }
+
+    2. mousePressed(),roda uma vez que nós clicamos
+
+        function mousePressed(){
+        background(255,0,0); // ← paints red ONCE
+    }
+
+há um conflito aqui. as vezes parece que vemos o flash, as vezes não porque o draw pinta de preto a tela antes de qualquer coisa. um ESTADO é a condição atual do programa, a informação que ele guarda entre momentos. EVENTO é algo que acontece num momento especifico, geralmente como uma reação.
+
+    eventos acontecem - mudam o estado - draw() lê o estado e mostra
