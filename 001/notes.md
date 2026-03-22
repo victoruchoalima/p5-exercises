@@ -203,3 +203,9 @@ temos aqui duas coisas independentes
 há um conflito aqui. as vezes parece que vemos o flash, as vezes não porque o draw pinta de preto a tela antes de qualquer coisa. um ESTADO é a condição atual do programa, a informação que ele guarda entre momentos. EVENTO é algo que acontece num momento especifico, geralmente como uma reação.
 
     eventos acontecem - mudam o estado - draw() lê o estado e mostra
+
+5. nós podemos também criar nossas próprias variáveis. três passos:
+
+    1. declarar
+    2. inicializar
+    3. utilizar
