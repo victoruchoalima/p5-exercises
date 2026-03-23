@@ -246,3 +246,16 @@ há um conflito aqui. as vezes parece que vemos o flash, as vezes não porque o 
 
     conditional statements servem para controlar esse fluxo
 
+9. for loops
+
+é preciso ter em mente que o proposito do for loop dentro do draw loop não é o de animar. é o de desenhar varias coisas de uma vez. no p5 tudo que está dentro do draw loop roda uma vez por frame, mais ou menos 60 vezes por segundo. portanto se eu coloco um for loop dentro dele o que acontece é que cada frame:
+
+    1. draw() inicializa
+    2. o for loop roda completamente
+    3. a imagem é renderizada
+    4. navegador aguarda para o proximo frame
+    5. processo se repete
+
+portanto se queremos fazer animações é preciso ter isso em mente.
+
+10. a definição de funções é uma estrategia interessante para organizar o código e evitar projetos enormes escritos dentro da função draw
