@@ -234,7 +234,7 @@ há um conflito aqui. as vezes parece que vemos o flash, as vezes não porque o 
 
         image(pg,0,0)
 
-8. Conditional Statementes (I)
+8. Conditional Statements
 
     até o momento o caminho básico que construímos para os desenhos foi:
 
@@ -243,3 +243,6 @@ há um conflito aqui. as vezes parece que vemos o flash, as vezes não porque o 
     draw -> ir para o draw, e repetir infinitamente
 
     * com eventos possiveis, ex, mousePressed
+
+    conditional statements servem para controlar esse fluxo
+
