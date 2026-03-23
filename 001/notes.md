@@ -209,3 +209,37 @@ há um conflito aqui. as vezes parece que vemos o flash, as vezes não porque o 
     1. declarar
     2. inicializar
     3. utilizar
+
+6. map()
+
+    o map do p5 é diferente do map de arrays. em p5js, map() pega um valor em um range e converte proporcionalmente para outro range. map recebe 5 argumentos.
+
+    a, valor que será mapeado 
+    b, valor minimo do primeiro range
+    c, valor maximo do primeiro range
+    d, valor minimo do segundo range
+    e, valor máximo do segundo range
+
+    retorna o valor.
+
+7. createGraphics()
+
+    cria um canvas off-screen. desenhamos numa superficie separada e decidimos como quando mostrar
+
+    sintaxe:
+
+        let pg = createGraphics(width, height)
+
+    pg vira um mini p5 dentro do desenho. é como se acrescentassemos layers. e só renderizamos quando fazemos:
+
+        image(pg,0,0)
+
+8. Conditional Statementes (I)
+
+    até o momento o caminho básico que construímos para os desenhos foi:
+
+    setup -> iniciar no setup
+
+    draw -> ir para o draw, e repetir infinitamente
+
+    * com eventos possiveis, ex, mousePressed
