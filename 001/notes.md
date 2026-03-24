@@ -259,3 +259,9 @@ há um conflito aqui. as vezes parece que vemos o flash, as vezes não porque o 
 portanto se queremos fazer animações é preciso ter isso em mente.
 
 10. a definição de funções é uma estrategia interessante para organizar o código e evitar projetos enormes escritos dentro da função draw
+
+11. OOP
+
+A. ENCAPSULATION
+
+    a ideia é a de agrupar tudo que constitui uma entidade num só lugar [OBJETO]. todos os dados e métodos que operam nesses dados numa só unidade e controlar como esses dados são acessados e modificados.
