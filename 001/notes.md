@@ -265,3 +265,4 @@ portanto se queremos fazer animações é preciso ter isso em mente.
 A. ENCAPSULATION
 
     a ideia é a de agrupar tudo que constitui uma entidade num só lugar [OBJETO]. todos os dados e métodos que operam nesses dados numa só unidade e controlar como esses dados são acessados e modificados.
+

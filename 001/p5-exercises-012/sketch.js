@@ -1,7 +1,7 @@
 let bubbles= [];
 
 function setup() {
-    createCanvas(600, 400); 
+    createCanvas(windowWidth, windowHeight); 
     // for(let i=0;i<10;i++){
     //     let x = random(width)
     //     let y = random(height)
@@ -25,11 +25,18 @@ function mouseDragged(){
 }
 
 function draw() {
-    
     background(0);
-    for(let i=0;i<bubbles.length;i++){
-        bubbles[i].move()
-        bubbles[i].show()
+    
+    // //sintaxe loop for
+    // for(let i=0;i<bubbles.length;i++){
+    //     bubbles[i].move()
+    //     bubbles[i].show()
+    // }
+
+    //sintaxe loop for...of
+    for (let bubble of bubbles){
+        bubble.move();
+        bubble.show();
     }
 }
 
