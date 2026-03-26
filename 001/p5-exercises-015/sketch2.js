@@ -108,3 +108,5 @@ class Bubble {
     }
 
 }
+//TIPS FOR FUTURE
+//of course there is a lot to do here. we can find a way to put overlapping as a property of the bubble class, we can write a better algorithm for this overllapping checking, etc.
