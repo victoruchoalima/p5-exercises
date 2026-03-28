@@ -60,6 +60,7 @@ class Point{
     }
 }
 
+
 /*STRUCTURING
 
 the idea here was to organize the code in a way that we could get rid of that code where everything was being done in the same place.
