@@ -8,7 +8,7 @@ function setup() {
 
 function draw() {
     background(0);
-
+   
     bubble1.move();
     bubble1.show();
 
