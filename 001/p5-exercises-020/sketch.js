@@ -23,6 +23,7 @@ function draw(){
   // randomSeed(1)
   frameRate(10)
   // let points = [[30, height/2], [150, 20, 1.5], [130, 400], [width - 300, 50]];
+  brush.refreshField(t)
   
 
   brush.set('charcoal','#002185', 2)
@@ -63,7 +64,7 @@ function draw(){
   }
   
   
-
+ t= t+1
 
 }
 
