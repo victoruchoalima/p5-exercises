@@ -1,5 +1,6 @@
 let font
-let text = 'oooooooooooooooo\nooonadaonuncaooo\nooodesapareceuooo\noocompletamenteoo\noooooooooooooooo'
+// let text = 'oooooooooooooooo\nooonadaonuncaooo\nooodesapareceuooo\noocompletamenteoo\noooooooooooooooo'
+let text = 'nada nunca\ndesapareceu\ncompletamente'
 let contours
 
 
@@ -21,17 +22,15 @@ async function setup() {
 }
 
 function draw() {
-   
-    background("#fffceb");
+  
+    background("#ff2911");
     translate(-width/2, -height/2)
-
-
-    
-    // frameRate(10)
+ 
+    frameRate(10)
     brush.noStroke()
    
-    brush.hatch(4, 0, {rand: 0.1, continuous: false, gradient: 0.01});
-    brush.hatchStyle("pastel", "black",1);
+    brush.hatch(5, 0, {rand: 0.1, continuous: false, gradient: 0.01});
+    brush.hatchStyle("pastel", "#000000",4);
 
     for (let contour of contours){
        brush.beginShape()
